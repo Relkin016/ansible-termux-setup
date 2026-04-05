@@ -17,7 +17,7 @@ yes | pkg install \
 export CARGO_BUILD_TARGET=aarch64-linux-android
 export RUSTFLAGS="-C lto=n"
 # Setup Android API 
-export ANDROID_API_LEVEL=29 # !!Write your API LEVEL"
+export ANDROID_API_LEVEL=$(getprop ro.build.version.sdk)
 # Install the latest Python package manager.
 # The version of pip that comes with Python may be outdated.
 pip install --upgrade pip 

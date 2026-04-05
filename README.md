@@ -10,25 +10,9 @@ It allows me and you to setup Termux in a repeatable way.
 [Ansible](https://www.ansible.com/) is an open-source software provisioning, configuration management, and application deployment tool. 
 It runs on many Unix-like systems, and can configure both Unix-like systems as well as Microsoft Windows. It includes its own [YAML](https://yaml.org/) based declarative language to describe system configuration. 
 
-I created a script that installs Ansible and all it's necessary dependencies on Termux.
-If you just install python and then try to install ansible with the Python package manager `pip`, you will run into several dependency errors. It will allow you to use Ansible with remote hosts. I have not tested it on `localhost` aka Termux itself yet!
+I modified legacy script to install ansible on newer Android versions.
 
-The script does the following:
-
-1. Update dependencies that are needed to compile some of the dependencies of Ansible using `pkg`.
-2. Update `pip`
-3. Update other Python packages using `pip`
-4. Install `pynacl` with `pip`
-5. install `ansible` with `pip`
-
-You can run this script as follows.
-
-```bash
-> pkg install wget
-> wget https://raw.githubusercontent.com/nicenemo/termux-setup/master/termux-install-ansible.sh
-> sh termux-install-ansible.sh
-```
-
-## Installing dev system
-
-> To be determined. I am not certain yet whether I want to do this with Ansible or just a bunch of `pkg install ...` or `apt install ...` commands. By default `apt` is not available. After running the script for ansible, `apt` is available. So I should be able to use Ansible.
+## Installation 
+1. clone repo
+2. edit ANDROID_API_LEVEL in file (Check your Android API level on your phone)
+3. run script

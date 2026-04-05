@@ -9,9 +9,9 @@ yes | pkg install \
   clang \
   cmake \ 
 # Add new dependencies 
-  binutils
-  rust
-  build-essential
+  binutils \
+  rust \
+  build-essential 
 
 # Add flags
 export CARGO_BUILD_TARGET=aarch64-linux-android

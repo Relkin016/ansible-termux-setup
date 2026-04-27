@@ -14,5 +14,4 @@ I modified legacy script to install ansible on newer Android versions.
 
 ## Installation 
 1. clone repo
-2. edit ANDROID_API_LEVEL in file (Check your Android API level on your phone)
-3. run script
+2. run script
